@@ -70,3 +70,107 @@ body {
     margin: 10px;
     display: inline-block;
 }
+
+/* --- Styling untuk Bagian Layanan (Service Section) --- */
+.services-section {
+    padding: 80px 5%;
+    text-align: center;
+    background-color: white; 
+}
+
+.services-section h3 {
+    font-size: 2.5em;
+    color: var(--color-primary);
+    margin-bottom: 50px;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Jarak antar kartu */
+    margin-bottom: 40px;
+}
+
+.service-card {
+    background-color: var(--color-bg-light); /* Latar belakang abu-abu muda */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    width: 45%; /* Sesuaikan lebar agar ada dua kartu sejajar */
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px); /* Efek hover minor */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.service-card h4 {
+    color: var(--color-accent); /* Judul Kartu pakai warna Merah Aksen */
+    font-size: 1.5em;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.service-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.service-card ul li {
+    padding: 5px 0;
+    border-bottom: 1px dashed rgba(0,0,0,0.1);
+}
+
+.icon-placeholder {
+    font-size: 3em;
+    color: var(--color-primary); /* Ikon pakai warna Biru Tua */
+    margin-bottom: 10px;
+}
+
+/* Styling CTA di dalam kartu */
+.btn-card-cta {
+    display: inline-block;
+    background-color: var(--color-primary); /* Tombol sekunder kartu pakai warna Biru Tua */
+    color: white !important;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn-card-cta:hover {
+    background-color: var(--color-accent); /* Berubah menjadi Merah saat hover */
+}
+
+/* Styling Footer Services */
+.cta-services-footer {
+    font-size: 1.1em;
+    margin-top: 40px;
+}
+
+.cta-services-footer a {
+    color: var(--color-accent); /* Link kontak di footer pakai Merah */
+    font-weight: 600;
+}
+
+/* --- Media Query untuk Responsive Design (Penting!) --- */
+@media (max-width: 768px) {
+    .services-container {
+        flex-direction: column; /* Kartu jadi vertikal di layar kecil */
+        gap: 20px;
+    }
+    .service-card {
+        width: 100%; /* Lebar penuh di mobile */
+    }
+    .hero-section h2 {
+        font-size: 2em; /* Kecilkan judul di mobile */
+    }
+    .main-header {
+        flex-wrap: wrap; /* Izinkan header membungkus */
+    }
+}
