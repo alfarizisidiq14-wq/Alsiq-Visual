@@ -1,0 +1,72 @@
+/* Definisikan Variabel Warna dari Logo Alsiq Visual */
+:root {
+    --color-primary: #37474F; /* Biru Keabu-abuan Tua (dari Logo) */
+    --color-accent: #E53935;  /* Merah Cerah (dari Logo) */
+    --color-text-dark: #212121;
+    --color-bg-light: #F5F5F5; /* Background abu-abu muda logo */
+}
+
+/* Reset Dasar & Font */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: white; /* Latar belakang putih bersih */
+    color: var(--color-text-dark);
+}
+
+/* Styling Header */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.main-header a {
+    text-decoration: none;
+    color: var(--color-primary); /* Link warna biru gelap */
+    margin: 0 15px;
+}
+
+/* Styling Tombol CTA Utama (Menggunakan Warna Aksen Merah) */
+.cta-button, .btn-primary {
+    background-color: var(--color-accent);
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover, .btn-primary:hover {
+    background-color: #C62828; /* Merah lebih gelap saat hover */
+}
+
+/* Styling Tombol Sekunder */
+.btn-secondary {
+    color: var(--color-primary) !important;
+    border: 2px solid var(--color-primary);
+    padding: 8px 18px;
+    border-radius: 5px;
+}
+
+/* Styling Hero Section */
+.hero-section {
+    background-color: var(--color-bg-light); /* Background abu-abu muda */
+    padding: 100px 5%;
+    text-align: center;
+}
+
+.hero-section h2 {
+    color: var(--color-primary);
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.cta-group a {
+    margin: 10px;
+    display: inline-block;
+}
