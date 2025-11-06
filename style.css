@@ -52,6 +52,23 @@ body {
     padding: 8px 18px;
     border-radius: 5px;
 }
+/* Styling Footer */
+.main-footer {
+    /* Tambahkan ini untuk memberi ruang di atas footer */
+    padding: 30px 5%;
+    
+    /* UBAH/TAMBAHKAN INI: Teks Rata Tengah */
+    text-align: center; 
+    
+    /* Styling Alsiq Visual */
+    background-color: var(--color-primary); /* Gunakan warna biru tua */
+    color: white; /* Jadikan teks berwarna putih */
+    font-size: 0.9em;
+}
+
+.main-footer p {
+    margin: 0; /* Hilangkan margin default pada paragraf */
+}
 
 /* Styling Hero Section */
 .hero-section {
