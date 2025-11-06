@@ -174,3 +174,21 @@ body {
         flex-wrap: wrap; /* Izinkan header membungkus */
     }
 }
+
+/* Styling Navigasi */
+.main-header nav ul {
+    list-style: none; /* Hilangkan bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Jadikan item sejajar horizontal */
+}
+
+.main-header nav ul li {
+    margin: 0 15px;
+}
+
+.main-header nav ul li a {
+    /* Pastikan link tidak terpengaruh margin */
+    display: block; 
+    padding: 5px 0;
+}
