@@ -304,3 +304,66 @@ body {
         width: 100%; /* Satu kartu per baris di mobile */
     }
 }
+
+/* --- Styling Halaman Portfolio & Gallery --- */
+
+/* Page Hero (Versi lebih ringkas dari Hero Section) */
+.page-hero {
+    background-color: var(--color-bg-light); 
+    padding: 80px 5%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-hero h2 {
+    color: var(--color-primary);
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.portfolio-content-area {
+    padding: 0 5%; 
+    margin-bottom: 80px;
+}
+
+/* Styling Filter Button */
+.portfolio-filters {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    margin: 5px;
+    border: 1px solid var(--color-primary);
+    border-radius: 20px;
+    text-decoration: none;
+    color: var(--color-primary);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: var(--color-accent); /* Warna merah Alsiq Visual saat aktif/hover */
+    color: white;
+    border-color: var(--color-accent);
+}
+
+/* Portfolio Grid Penuh (Menggunakan styling project-grid yang sudah ada, hanya perlu sedikit penyesuaian) */
+.portfolio-grid-full {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tiga kolom di desktop */
+    gap: 30px;
+}
+
+/* Pastikan Project Card di Portfolio juga Responsive (Jika belum ada di media query index) */
+@media (max-width: 992px) {
+    .portfolio-grid-full {
+        grid-template-columns: repeat(2, 1fr); /* Dua kolom di tablet */
+    }
+}
+@media (max-width: 600px) {
+    .portfolio-grid-full {
+        grid-template-columns: 1fr; /* Satu kolom di mobile */
+    }
+}
