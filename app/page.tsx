@@ -5,53 +5,64 @@ export default function Home() {
     <main className="min-h-screen bg-white text-[#2D4560]">
 
       {/* NAVBAR */}
-      <nav className="fixed top-0 z-50 w-full bg-white/80 backdrop-blur-md">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-          
-          {/* LOGO */}
-          <div className="text-2xl font-bold tracking-wide text-[#2D4560]">
-            ALSIQ <span className="text-[#F25555]">VISUAL</span>
-          </div>
+      {/* NAVBAR */}
+<nav className="fixed top-0 z-50 w-full bg-white/80 backdrop-blur-md">
+  <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-6 md:py-5">
 
-          {/* MENU */}
-          <div className="hidden gap-8 text-sm font-medium md:flex">
-            <a href="/" className="transition hover:text-[#F25555]">
-              Home
-            </a>
+    {/* LOGO */}
+    <div className="text-xl font-bold tracking-wide text-[#2D4560] md:text-2xl">
+      ALSIQ <span className="text-[#F25555]">VISUAL</span>
+    </div>
 
-            <a href="/services" className="transition hover:text-[#F25555]">
-  Services
-</a>
+    {/* MENU DESKTOP */}
+    <div className="hidden gap-8 text-sm font-medium md:flex">
+      <a href="/" className="transition hover:text-[#F25555]">
+        Home
+      </a>
 
-            <a href="/portfolio" className="transition hover:text-[#F25555]">
-              Portofolio
-            </a>
+      <a href="/services" className="transition hover:text-[#F25555]">
+        Services
+      </a>
 
-            <a href="/contact" className="transition hover:text-[#F25555]">
-              Contact
-            </a>
-          </div>
+      <a href="/portfolio" className="transition hover:text-[#F25555]">
+        Portofolio
+      </a>
 
-          {/* BUTTON */}
-          <a
-  href="https://wa.me/6285175459050"
-  target="_blank"
-  className="rounded-full bg-[#F25555] px-8 py-4 text-white transition hover:scale-105 inline-block"
->
-  Konsultasi Gratis
-</a>
-        </div>
-      </nav>
+      <a href="/contact" className="transition hover:text-[#F25555]">
+        Contact
+      </a>
+    </div>
+
+    {/* RIGHT SIDE */}
+    <div className="flex items-center gap-4">
+
+      {/* BUTTON DESKTOP */}
+      <a
+        href="https://wa.me/6285175459050"
+        target="_blank"
+        className="hidden rounded-full bg-[#F25555] px-6 py-3 text-sm text-white transition hover:scale-105 md:inline-block"
+      >
+        Konsultasi Gratis
+      </a>
+
+      {/* HAMBURGER MOBILE */}
+      <button className="text-3xl md:hidden">
+        ☰
+      </button>
+
+    </div>
+  </div>
+</nav>
 
       {/* HERO SECTION */}
       {/* HERO */}
 <section className="bg-gradient-to-b from-white to-[#FAFAFA] px-6 pt-40 pb-24">
-  <div className="mx-auto grid max-w-7xl items-center gap-16 md:grid-cols-2">
+ <div className="mx-auto grid max-w-7xl items-center gap-10 md:grid-cols-2">
 
     {/* LEFT */}
 <div className="max-w-xl">
 
-      <h1 className="text-5xl font-bold leading-tight md:text-7xl">
+      <h1 className="text-4xl font-bold leading-tight md:text-7xl">
         Visual yang Membantu
         Brand Anda Tumbuh
       </h1>
@@ -61,7 +72,7 @@ export default function Home() {
         untuk UMKM, personal branding, dan bisnis modern.
       </p>
 
-      <div className="mt-10 flex gap-4">
+      <div className="mt-10 flex flex-col gap-4 sm:flex-row">
 
         <a
           href="https://wa.me/6285175459050"
@@ -98,7 +109,7 @@ export default function Home() {
   </div>
 </section>
 {/* SERVICES SECTION */}
-<section className="bg-[#F5F5F5]px-6 py-24">
+<section className="bg-[#F5F5F5] px-6 py-24">
 
   <div className="mx-auto max-w-7xl">
 
