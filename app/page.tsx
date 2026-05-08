@@ -223,7 +223,7 @@ export default function Home() {
       <div className="group overflow-hidden rounded-3xl bg-[#F7F7F7]">
         <div className="relative h-[420px] overflow-hidden">
   <Image
-    src="/images/product.png"
+    src="/images/product1.png"
     alt="Graduation"
     fill
     className="object-cover transition duration-500 group-hover:scale-105"
