@@ -1,50 +1,100 @@
 "use client";
 
+import { useState } from "react";
+
 export default function ContactPage() {
+
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <main className="min-h-screen bg-white text-[#2D4560]">
 
       {/* NAVBAR */}
-      <nav className="fixed top-0 z-50 w-full bg-white/80 backdrop-blur-md">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
+<nav className="fixed top-0 z-50 w-full bg-white/80 backdrop-blur-md">
+  <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-6 md:py-5">
 
-          {/* LOGO */}
-          <div className="text-2xl font-bold tracking-wide text-[#2D4560]">
-            ALSIQ <span className="text-[#F25555]">VISUAL</span>
-          </div>
+    {/* LOGO */}
+    <div className="text-xl font-bold tracking-wide text-[#2D4560] md:text-2xl">
+      ALSIQ <span className="text-[#F25555]">VISUAL</span>
+    </div>
 
-          {/* MENU */}
-          <div className="hidden gap-8 text-sm font-medium md:flex">
+    {/* MENU DESKTOP */}
+    <div className="hidden gap-8 text-sm font-medium md:flex">
 
-            <a href="/" className="transition hover:text-[#F25555]">
-              Home
-            </a>
+      <a href="/" className="transition hover:text-[#F25555]">
+        Home
+      </a>
 
-            <a href="/services" className="transition hover:text-[#F25555]">
-              Services
-            </a>
+      <a href="/services" className="transition hover:text-[#F25555]">
+        Services
+      </a>
 
-            <a href="/portfolio" className="transition hover:text-[#F25555]">
-              Portofolio
-            </a>
+      <a href="/portfolio" className="transition hover:text-[#F25555]">
+        Portofolio
+      </a>
 
-            <a href="/contact" className="transition hover:text-[#F25555]">
-              Contact
-            </a>
+      <a href="/contact" className="transition hover:text-[#F25555]">
+        Contact
+      </a>
 
-          </div>
+    </div>
 
-          {/* BUTTON */}
-          <a
-            href="https://wa.me/6285175459050"
-            target="_blank"
-            className="rounded-full bg-[#F25555] px-6 py-3 text-sm text-white transition hover:scale-105"
-          >
-            Konsultasi
-          </a>
+    {/* RIGHT SIDE */}
+    <div className="flex items-center gap-4">
 
-        </div>
-      </nav>
+      {/* BUTTON DESKTOP */}
+      <a
+        href="https://wa.me/6285175459050"
+        target="_blank"
+        className="hidden rounded-full bg-[#F25555] px-6 py-3 text-sm text-white transition hover:scale-105 md:inline-block"
+      >
+        Konsultasi Gratis
+      </a>
+
+      {/* HAMBURGER MOBILE */}
+      <button
+        onClick={() => setMenuOpen(!menuOpen)}
+        className="text-3xl md:hidden"
+      >
+        ☰
+      </button>
+
+    </div>
+  </div>
+
+  {/* MOBILE MENU */}
+  {menuOpen && (
+    <div className="border-t bg-white px-6 py-6 shadow-md md:hidden">
+
+      <div className="flex flex-col gap-5 text-lg font-medium">
+
+        <a href="/" onClick={() => setMenuOpen(false)}>
+          Home
+        </a>
+
+        <a href="/services" onClick={() => setMenuOpen(false)}>
+          Services
+        </a>
+
+        <a href="/portfolio" onClick={() => setMenuOpen(false)}>
+          Portofolio
+        </a>
+
+        <a href="/contact" onClick={() => setMenuOpen(false)}>
+          Contact
+        </a>
+
+        <a
+          href="https://wa.me/6285175459050"
+          target="_blank"
+          className="mt-2 rounded-full bg-[#F25555] px-6 py-3 text-center text-white"
+        >
+          Konsultasi Gratis
+        </a>
+
+      </div>
+    </div>
+  )}
+</nav>
 
       {/* HERO */}
       <section className="px-6 pt-40 pb-24 text-center">
